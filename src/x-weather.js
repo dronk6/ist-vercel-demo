@@ -28,6 +28,7 @@ class XWeather extends LitElement {
 		const weather = await fetch(`${this.endpoint}?city=${city}`).then(res => res.json());
 		this.weather = weather?.weather[0];
 	}
+	
 	static get styles() {
 		return css`
 			:host {
@@ -51,6 +52,7 @@ class XWeather extends LitElement {
 			}
 		`;
 	}
+
 	render() {
 		return html`
 			<p>
@@ -63,4 +65,5 @@ class XWeather extends LitElement {
 	}
 }
 
+// eslint-disable-next-line wc/no-invalid-element-name
 customElements.define('x-weather', XWeather);
