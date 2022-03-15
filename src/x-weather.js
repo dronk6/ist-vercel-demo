@@ -6,7 +6,7 @@ class XWeather extends LitElement {
 			endpoint: { type: String },
 			city: { type: String, reflect: true },
 			weather: { type: Object }
-		}
+		};
 	}
 
 	constructor() {
